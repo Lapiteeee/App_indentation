@@ -53,11 +53,35 @@ pip install -r requirements.txt
 
 ## Lancement
 
+### Terminal
 ```bash
 python app.py
 ```
 
-L'interface s'ouvre automatiquement dans le navigateur par défaut.
+### VS Code
+
+1. Ouvrir le dossier du projet : **Fichier → Ouvrir le dossier…**
+2. Sélectionner l'interpréteur Python : `Cmd+Shift+P` → `Python: Select Interpreter` → choisir le `venv` créé ci-dessus (`./venv/bin/python`)
+3. Ouvrir `app.py`
+4. Lancer avec `F5` ou le bouton ▷ en haut à droite
+
+Pour configurer le lancement en un clic, créer `.vscode/launch.json` :
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Indentation",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "app.py",
+            "console": "integratedTerminal"
+        }
+    ]
+}
+```
+
+L'interface s'ouvre automatiquement.
 
 ## Utilisation
 
