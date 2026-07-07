@@ -39,29 +39,37 @@ claude/
 **Règle d'or** : `core/` ne contient aucun appel à `matplotlib`, `print`, ni I/O
 d'affichage. Le moteur retourne des données brutes ; l'interface dessine.
 
-## Installation
+## Installation et lancement
 
+### Option 1 — uv (recommandé, le plus simple)
+
+Installer `uv` si pas déjà fait :
 ```bash
-# Créer un environnement virtuel
-python -m venv venv
-source venv/bin/activate          # macOS / Linux
-# venv\Scripts\activate.bat       # Windows
-
-# Installer les dépendances
-pip install -r requirements.txt
+curl -Ls https://astral.sh/uv/install.sh | sh
 ```
 
-## Lancement
-
-### Terminal
+Puis lancer directement :
 ```bash
+uv run app.py
+```
+
+`uv` installe automatiquement toutes les dépendances au premier lancement.
+
+---
+
+### Option 2 — Python classique
+
+```bash
+pip install -r requirements.txt
 python app.py
 ```
 
-### VS Code
+---
+
+### Depuis VS Code
 
 1. Ouvrir le dossier du projet : **Fichier → Ouvrir le dossier…**
-2. Sélectionner l'interpréteur Python : `Cmd+Shift+P` → `Python: Select Interpreter` → choisir le `venv` créé ci-dessus (`./venv/bin/python`)
+2. Sélectionner l'interpréteur Python : `Cmd+Shift+P` → `Python: Select Interpreter`
 3. Ouvrir `app.py`
 4. Lancer avec `F5` ou le bouton ▷ en haut à droite
 
@@ -80,8 +88,6 @@ Pour configurer le lancement en un clic, créer `.vscode/launch.json` :
     ]
 }
 ```
-
-L'interface s'ouvre automatiquement.
 
 ## Utilisation
 
