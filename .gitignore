@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+*.pyo
+build/
+dist/
+*.spec
+.DS_Store
+venv/
+*.egg-info/
+
+CLAUDE.md
+
+# Données — non versionnées
+*.dat
+BDD_*.py
+ce_que_jai_fait/
+pivot Fmax/
+pivot faible/
+pivot libre/
+pivot zero/
+pivot  Frelatif/
+profile_mixte_monob05b_1.dat
